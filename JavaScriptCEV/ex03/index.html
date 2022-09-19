@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(to bottom, rgb(52, 151, 217), rgb(213, 30, 195));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Curso em Video</h1>
+
+    <script>
+
+        //Converter string para number
+        //numer.parseInt(ou so parseInt) = converte para inteiro || number.parseFloat(ou so parseFloat) = converte para float || number = o navegador se vira
+
+        //Convertendo para number 
+        var n1 = Number(window.prompt('Digite um numero'))
+        var n2 = Number(window.prompt('Digite outro numero'))
+        var s = n1 + n2
+                                            //Convertendo para string
+        window.alert('a soma dos valores é: ' + string(s))
+
+        //Converter number para string
+        //string(variavel) ou variavel.toString() 
+
+
+        //Juntar variaveis nas frases
+       var nome = 'Crebin'
+       var idade = 15
+       var nota = 7.2
+
+       //Pode fazer adicionar as variaveis as frases assim 
+        ('o aluno' + nome 'que tem' + idade 'tiro a nota' + nota)
+       //ou assim (Precisa ser entre a crase ``)
+        (`O aluno ${nome} que tem ${idade} tirou a nota ${nota}`)
+
+
+        
+    </script>
+    
+</body>
+</html>

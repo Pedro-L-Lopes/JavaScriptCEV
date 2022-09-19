@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(to bottom, rgb(52, 151, 217), rgb(213, 30, 195));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-size: 2    em;
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Curso em Video</h1>
+
+    <script id="js">
+
+        /*var nome = window.prompt('Qual o seu nome?')
+        document.write(`Olá, ${nome}!! Seu nome tem ${nome.length} letras. </br>`) 
+        document.write(`Seu nome em maisculas é ${nome.toUpperCase()} </br>`)
+        document.write(`Seu nome em minusculo é ${nome.toLowerCase()}`)*/
+
+        var n1 = 1505.50
+        //Deixar o numero com duas casa decimais 
+        document.write(`O valor de n1 é: ${n1.toFixed(2)} </br>`)
+        //Trocar um elemnto por outro, nesse caso o ponto por virgula
+        document.write(`O valor de n1 é: ${n1.toFixed(2).replace('.', ',')} </br>`)
+        //Localizar uma string para mostrar o valor com o jeito da moeda local
+        document.write(`O salario e: ${n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} `)
+ 
+        
+    </script>
+    
+</body>
+</html>

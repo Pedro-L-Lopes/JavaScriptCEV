@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(to bottom, rgb(52, 151, 217), rgb(213, 30, 195));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-size: 2    em;
+        }
+
+        h1, p{
+            color: white;
+            text-align: center;
+        }
+
+        #area{
+            font: nomrla 20pt arial;
+            background: rgb(37, 228, 37);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Curso em Video</h1>
+    <p>Eventos DOM</p>
+
+
+    <div id="area">
+        interaja
+    </div>
+
+    <a href="index2.html">index2</a>
+
+    <script> 
+        var a = document.getElementById('area')
+
+        //Para não poluir o HTML 
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseover', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerHTML = 'Cliclou!'
+            a.style.background = 'red'
+        }
+
+        function entrar(){
+            a.innerHTML = 'Entrou!'
+            a.style.background = 'black'
+        }
+
+        function sair(){
+            a.innerHTML = 'Saiu!'
+            a.style.background = 'green'
+        }
+        
+    </script>
+    
+</body>
+</html>

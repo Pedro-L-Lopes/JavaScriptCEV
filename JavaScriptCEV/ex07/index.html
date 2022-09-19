@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(to bottom, rgb(52, 151, 217), rgb(213, 30, 195));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-size: 2    em;
+        }
+
+        h1, p, #vce{
+            color: white;
+            text-align: center;
+        }
+
+        input{
+            margin-left: 50%;
+            transform: translate(-50%);
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistemas de Multas</h1>
+    <p>Velocidade do carro:</p>  
+    <input type="number" name="txtvel" id="txtvel"> <p>Km/h</p>
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <h1 id="g">Brasileiro ou Gringo?</h1>
+    <input type="text" name="pais" id="pais">
+    <!--Usar 'Button' ao inves de 'Input Button' se quiser mexer no CSS EX: <button  onclick="paiss()">Teste</button>-->
+    <input type="button" value="verificar" onclick="paiss()">
+    <div id="res2"></div>
+
+    <script>
+
+        function paiss(){
+            var pais2 = (document.getElementById('pais').value.toLowerCase())
+            var res2 = document.getElementById('res2').innerHTML = `<p>Seu pais é o(a) ${pais2} <br></p>`   
+
+            if(pais2 != 'brasil'){
+                document.getElementById('res2').innerHTML += '<p>Gringo</p>'   
+            }else{
+                document.getElementById('res2').innerHTML += '<p>Brasileiro</p>'
+            }
+            
+            var gg = document.getElementById('g')
+            gg.style.background = 'rgba(255, 255, 255, 0.100)'
+        }
+
+        
+        function calcular(){
+            var txtv = document.getElementById('txtvel')
+            var res = document.getElementById('res')
+            var vel = Number(txtv.value)
+
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong><p/>`
+            if(vel > 60){
+                res.innerHTML += `<p>Você está acima da velocidade e recebera uma multa!</p>` 
+            }else{
+                res.innerHTML += `<p>Está no limte permitido.</p>`
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
